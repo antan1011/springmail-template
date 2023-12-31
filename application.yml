@@ -1,0 +1,53 @@
+server:
+  port: 80
+  shutdown: graceful
+#  ssl:
+#    key-store: classpath:inmlg.space.jks
+#    key-store-password: 4kjew3uh
+#    key-store-type: JKS
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 60s
+  data:
+    mongodb:
+      host: 111.230.31.101
+      port: 27017
+      database: blog
+      username: antan
+      password: tcftcf9923
+    redis:
+      host: 111.230.31.101
+      port: 6379
+      password: tcftcf9923
+      database: 0
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  mail:
+    host: smtp.qq.com #发送邮件服务器
+    username: 1632938020@qq.com #QQ邮箱
+    password: qcamqxuhmhjwdcbf #客户端授权码
+    protocol: smtp #发送邮件协议
+    properties:
+      mail:
+        smtp:
+          port: 465
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+        display:
+          sendmail: anfeng
+          sendname: anfeng
+minio:
+  host: http://111.230.31.101:9000
+  bucket: images
+  accessKey: antan
+  secretKey: tcftcf9923
+  tag-bucket: tag
+authMail: anfeng9923@gmail.com
+timeTask:
+  leavewordCron: 0 0 19 * * ?
